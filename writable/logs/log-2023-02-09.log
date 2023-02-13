@@ -1,0 +1,45 @@
+CRITICAL - 2023-02-09 21:11:40 --> 22 : The requested URL returned error: 404 
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\HTTP\CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\HTTP\CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\HTTP\CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.ope...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.ope...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-09 21:12:13 --> Too few arguments to function CodeIgniter\HTTP\CURLRequest::request(), 1 passed in C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php on line 10 and at least 2 expected
+#0 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('https://api.ope...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-09 21:13:00 --> Too few arguments to function CodeIgniter\HTTP\CURLRequest::request(), 1 passed in C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php on line 10 and at least 2 expected
+#0 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('https://api.ope...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-09 21:13:16 --> Too few arguments to function CodeIgniter\HTTP\CURLRequest::request(), 1 passed in C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php on line 10 and at least 2 expected
+#0 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('https://api.ope...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-09 21:13:19 --> Too few arguments to function CodeIgniter\HTTP\CURLRequest::request(), 1 passed in C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php on line 10 and at least 2 expected
+#0 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('https://api.ope...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-09 21:13:59 --> Too few arguments to function CodeIgniter\HTTP\CURLRequest::request(), 1 passed in C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php on line 10 and at least 2 expected
+#0 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(10): CodeIgniter\HTTP\CURLRequest->request('https://api.ope...')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
