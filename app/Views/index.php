@@ -737,7 +737,7 @@
                         </div>
                         <div class="col-sm-8">
                           <div class="weather-text">
-                            <h2>Texas <br><i>Partly Cloudy Day</i></h2>
+                            <h2>Bandar Lampung <br><i>Partly Cloudy Day</i></h2>
                           </div>
                         </div>
                       </div>

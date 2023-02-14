@@ -13,8 +13,14 @@ class Home extends BaseController
 			]
 		]);
       
-        $array = json_decode($response->getBody());
-        
-        return view('index');
+        $row = json_decode($response->getBody());
+        $data['temp'] = array(
+          'temperature' =>  $row->current_weather->temperature,
+          'time' => $row->current_weather->time,
+          'windspeed' => $row->current_weather->windspeed,
+          
+        );
+    
+        echo view('index', $data);
     }
 }
