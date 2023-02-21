@@ -22,5 +22,7 @@ class Home extends BaseController
         );
     
         echo view('index', $data);
+
+
     }
 }
