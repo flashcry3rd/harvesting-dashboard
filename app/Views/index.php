@@ -1,875 +1,1001 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+<!doctype html>
+<html lang="en" class="color-header headercolor2">
 
-    <title>Gentelella Alela! | </title>
 
-    <!-- Bootstrap -->
-    <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="./vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="./vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+<!-- Mirrored from codervent.com/rukada/demo/horizontal/dashboard-eCommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Feb 2023 09:45:20 GMT -->
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	
-    <!-- bootstrap-progressbar -->
-    <link href="./vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="./vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="./vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="assets/css/semi-dark.css" />
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<title>PNS - Harvesing Data Dashboard</title>
+</head>
 
-    <!-- Custom Theme Style -->
-    <link href="./build/css/custom.min.css" rel="stylesheet">
-    
-  </head>
+<body>
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--start header wrapper-->	
+	  <div class="header-wrapper">
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="topbar-logo-header">
+						<div class="">
+							<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+						</div>
+						<div class="">
+							<h4 class="logo-text">PNS Harvesting Dashboard</h4>
+						</div>
+					</div>
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+					<div class="search-bar flex-grow-1">
+						<div class="position-relative search-bar-box">
+							<!-- <input type="time" class="form-control search-control" > <span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span> -->
+							<span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
+						</div>
+					</div>
+					
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Pauline Seitz</p>
+								<p class="designattion mb-0">Web Designer</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-download'></i><span>Downloads</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--navigation-->
+		<div class="nav-container primary-menu">
+			<div class="mobile-topbar-header">
+				<div>
+					<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">PNS Harvesting Dashboard</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			
+		</div>
+		<!--end navigation-->
+	   </div>
+	   <!--end header wrapper-->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4">
 
-  <body class="">
-    <div class="container body">
-      <div class="col-xl-12">
-        
-
-        <!-- top navigation -->
-        <!-- <div class="top_nav">
-          <div class="nav_menu">
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-              <nav class="nav navbar-nav">
-              <ul class=" navbar-right">
-                <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="./production/images/img.jpg" alt="">John Doe
-                  </a>
-                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                      <a class="dropdown-item"  href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                  <a class="dropdown-item"  href="javascript:;">Help</a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                  </div>
-                </li>
-
-                <li role="presentation" class="nav-item dropdown open">
-                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <div class="text-center">
-                        <a class="dropdown-item">
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div> -->
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row" style="display: inline-block;" >
-          <div class="tile_count">
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-              <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count green">2,500</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4  tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-          </div>
-        </div>
-          <!-- /top tiles -->
-
-          <div class="row">
-            <div class="col-md-12 col-sm-12 ">
-              <div class="dashboard_graph">
-
-                <div class="row x_title">
-                  <div class="col-md-6">
-                    <h3>Network Activities <small>Graph title sub-title</small></h3>
-                  </div>
-                  <div class="col-md-6">
-                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                      <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-9 col-sm-9 ">
-                  <div id="chart_plot_01" class="demo-placeholder"></div>
-                </div>
-                <div class="col-md-3 col-sm-3  bg-white">
-                  <div class="x_title">
-                    <h2>Top Campaign Performance</h2>
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div class="col-md-12 col-sm-12 ">
-                    <div>
-                      <p>Facebook Campaign</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Twitter Campaign</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 ">
-                    <div>
-                      <p>Conventional Media</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Bill boards</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="clearfix"></div>
-              </div>
-            </div>
-
-          </div>
-          <br />
-
-          <div class="row">
+					<div class="col">
+						<div class="card radius-10 bg-primary">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Revenue</p>
+										<h4 class="my-1 text-white">$75K</h4>
+										<p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p>
+									</div>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-wallet"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-danger">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Total Customers</p>
+										<h4 class="my-1 text-white">8.4K</h4>
+										<p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>1.6K from last week</p>
+									</div>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-group"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-success">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Store Visitors</p>
+										<h4 class="my-1 text-white">59K</h4>
+										<p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>2.4K from last week</p>
+									</div>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-binoculars"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-warning">
+							<div class="card-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div>
+										<p class="mb-0 text-white">Bounce Rate</p>
+										<h4 class="my-1 text-white">34.46%</h4>
+										<p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>12.2% from last week</p>
+									</div>
+									<div class="widgets-icons bg-light-transparent text-white"><i class="bx bx-line-chart-down"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
 
 
-            <div class="col-md-4 col-sm-4 ">
-              <div class="x_panel tile fixed_height_320">
-                <div class="x_title">
-                  <h2>App Versions</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <h4>App Usage across versions</h4>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.2</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>123k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
+				  <div class="row">
+					<div class="col-12 col-lg-8 col-xl-8 d-flex">
+					  <div class="card radius-10 w-100">
+						<div class="card-body">
+						  <div class="d-flex align-items-center mb-3">
+							<h5 class="mb-0">Performance</h5>
+							<div class="dropdown options ms-auto">
+							  <div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+								<i class='bx bx-dots-horizontal-rounded'></i>
+							  </div>
+							  <ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="javascript:;">Action</a></li>
+								<li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+								<li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+							  </ul>
+							</div>
+						  </div>
 
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.3</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>53k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.4</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>23k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.5</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>3k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.6</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>1k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
+						  <div class="hstack flex-wrap align-items-center justify-content-between gap-3 gap-sm-4 mb-3 border p-3 radius-10">
+                            <div class="">
+								<h5 class="mb-0">974 <span class="text-success font-13">56% <i class='bx bx-up-arrow-alt'></i></span></h5>
+								<p class="mb-0">Page Views</p>
+							</div>
+							<div class="vr"></div>
+							<div class="">
+								<h5 class="mb-0">1,218 <span class="text-danger font-13">34% <i class='bx bx-down-arrow-alt'></i></span></h5>
+							    <p class="mb-0">Total Sales</p>
+							</div>
+							<div class="vr"></div>
+							<div class="">
+								<h5 class="mb-0">42.8% <span class="text-success font-13">22% <i class='bx bx-up-arrow-alt'></i></span></h5>
+							    <p class="mb-0">Conversion Rate</p>
+							</div>
+						  </div>
+		  
+						  <div class="chart-js-container1">
+							<canvas id="chart1"></canvas>
+						  </div>
+		  
+						</div>
+					  </div>
+					</div>
+					<div class="col-12 col-lg-4 col-xl-4 d-flex">
+					  <div class="card radius-10 overflow-hidden w-100">
+						<div class="card-body">
+						  <div class="d-flex align-items-center mb-3">
+							<h5 class="mb-0">Top Categories</h5>
+							<div class="dropdown options ms-auto">
+							  <div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+								<i class='bx bx-dots-horizontal-rounded'></i>
+							  </div>
+							  <ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="javascript:;">Action</a></li>
+								<li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+								<li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+							  </ul>
+							</div>
+						  </div>
+						  <div class="chart-js-container2 mt-4">
+							<div class="piechart-legend">
+							  <h2 class="mb-1">8,452</h2>
+							  <h6 class="mb-0">Total Sessions</h6>
+							 </div>
+							<canvas id="chart2"></canvas>
+						  </div>
+						</div>
+						<ul class="list-group list-group-flush">
+						  <li class="list-group-item d-flex justify-content-between align-items-center border-top">
+							Clothing
+							<span class="badge bg-primary rounded-pill">558</span>
+						  </li>
+						  <li class="list-group-item d-flex justify-content-between align-items-center">
+							Electronics
+							<span class="badge bg-success rounded-pill">204</span>
+						  </li>
+						  <li class="list-group-item d-flex justify-content-between align-items-center">
+							Furniture
+							<span class="badge bg-danger rounded-pill">108</span>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				   </div><!--end row-->
 
-                </div>
-              </div>
-            </div>
+				<div class="card radius-10 w-100">
+					<div class="card-header">
+						<div class="d-flex align-items-center">
+							<div>
+								<h5 class="mb-0">Weekly Visits</h5>
+							</div>
+							<div class="dropdown options ms-auto">
+								<div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+									<i class='bx bx-dots-horizontal-rounded'></i>
+								</div>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="javascript:;">Action</a></li>
+									<li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+									<li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="chart-js-container3">
+							<canvas id="chart3"></canvas>
+						</div>
+					</div>
+				</div>
 
-            <div class="col-md-4 col-sm-4 ">
-              <div class="x_panel tile fixed_height_320 overflow_hidden">
-                <div class="x_title">
-                  <h2>Device Usage</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <th style="width:37%;">
-                        <p>Top 5</p>
-                      </th>
-                      <th>
-                        <div class="col-lg-7 col-md-7 col-sm-7 ">
-                          <p class="">Device</p>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 ">
-                          <p class="">Progress</p>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i>IOS </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>Android </p>
-                            </td>
-                            <td>10%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>Blackberry </p>
-                            </td>
-                            <td>20%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>Symbian </p>
-                            </td>
-                            <td>15%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>Others </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
+				<div class="card radius-10 w-100">
+					<div class="card-body">
+				
+						<div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-3">
+							<div class="col">
+								<div class="p-3 text-center border radius-10">
+									<span class="donut"
+										data-peity='{ "fill": ["#5e72e4", "#f2f2f2"], "innerRadius": 50, "radius": 32 }'>4/5</span>
+				
+									<h6 class="mb-0 mt-3">Total Orders : 4K</h6>
+								</div>
+							</div>
+							<div class="col">
+								<div class="p-3 text-center border radius-10">
+									<span class="donut"
+										data-peity='{ "fill": ["#ff2fa0", "#f2f2f2"], "innerRadius": 50, "radius": 32 }'>2/5</span>
+				
+									<h6 class="mb-0 mt-3">Pending : 1.2K</h6>
+								</div>
+							</div>
+							<div class="col">
+								<div class="p-3 text-center border radius-10">
+									<span class="donut"
+										data-peity='{ "fill": ["#2dce89", "#f2f2f2"], "innerRadius": 50, "radius": 32 }'>3/5</span>
+				
+									<h6 class="mb-0 mt-3">Delivered : 2.4</h6>
+								</div>
+							</div>
+							<div class="col">
+								<div class="p-3 text-center border radius-10">
+									<span class="donut"
+										data-peity='{ "fill": ["#fb6340", "#f2f2f2"], "innerRadius": 50, "radius": 32 }'>2/5</span>
+				
+									<h6 class="mb-0 mt-3">Received : 492</h6>
+								</div>
+							</div>
+						</div>
+						<!--end row-->
+				
+					</div>
+				</div>
 
-
-            <div class="col-md-4 col-sm-4 ">
-              <div class="x_panel tile fixed_height_320">
-                <div class="x_title">
-                  <h2>Quick Settings</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div class="dashboard-widget-content">
-                    <ul class="quick-list">
-                      <li><i class="fa fa-calendar-o"></i><a href="#">Settings</a>
-                      </li>
-                      <li><i class="fa fa-bars"></i><a href="#">Subscription</a>
-                      </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
-                      <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                      </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
-                      <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                      </li>
-                      <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
-                      </li>
-                    </ul>
-
-                    <div class="sidebar-widget">
-                        <h4>Profile Completion</h4>
-                        <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
-                        <div class="goal-wrapper">
-                          <span id="gauge-text" class="gauge-value pull-left">0</span>
-                          <span class="gauge-value pull-left">%</span>
-                          <span id="goal-text" class="goal-value pull-right">100%</span>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-4 col-sm-4 ">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Recent Activities <small>Sessions</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div class="dashboard-widget-content">
-
-                    <ul class="list-unstyled timeline widget">
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-8 col-sm-8 ">
-
-
-
-              <div class="row">
-
-                <div class="col-md-12 col-sm-12 ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Visitors location <small>geo-presentation</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <div class="dashboard-widget-content">
-                        <div class="col-md-4 hidden-small">
-                          <h2 class="line_30">125.7k Views from 60 countries</h2>
-
-                          <table class="countries_list">
-                            <tbody>
-                              <tr>
-                                <td>United States</td>
-                                <td class="fs15 fw700 text-right">33%</td>
-                              </tr>
-                              <tr>
-                                <td>France</td>
-                                <td class="fs15 fw700 text-right">27%</td>
-                              </tr>
-                              <tr>
-                                <td>Germany</td>
-                                <td class="fs15 fw700 text-right">16%</td>
-                              </tr>
-                              <tr>
-                                <td>Spain</td>
-                                <td class="fs15 fw700 text-right">11%</td>
-                              </tr>
-                              <tr>
-                                <td>Britain</td>
-                                <td class="fs15 fw700 text-right">10%</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div id="world-map-gdp" class="col-md-8 col-sm-12 " style="height:230px;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="row">
+				
+				<div class="row row-cols-1 row-cols-lg-3">
+					<div class="col d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-header">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-0">New Customers</h5>
+									</div>
+									<div class="dropdown options ms-auto">
+										<div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+										  <i class='bx bx-dots-horizontal-rounded'></i>
+										</div>
+										<ul class="dropdown-menu">
+										  <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+										</ul>
+									  </div>
+								</div>
+							</div>
+							
+							<div class="customers-list p-3 mb-3">
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-3.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Emy Jackson</h6>
+										<p class="mb-0 font-13 text-secondary">emy_jac@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-4.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Martin Hughes</h6>
+										<p class="mb-0 font-13 text-secondary">martin.hug@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-23.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Laura Madison</h6>
+										<p class="mb-0 font-13 text-secondary">laura_01@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-24.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Shoan Stephen</h6>
+										<p class="mb-0 font-13 text-secondary">s.stephen@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-20.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Keate Medona</h6>
+										<p class="mb-0 font-13 text-secondary">Keate@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-16.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Paul Benn</h6>
+										<p class="mb-0 font-13 text-secondary">pauly.b@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-25.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Winslet Maya</h6>
+										<p class="mb-0 font-13 text-secondary">winslet_02@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-11.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Bruno Bernard</h6>
+										<p class="mb-0 font-13 text-secondary">bruno.b@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-17.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Merlyn Dona</h6>
+										<p class="mb-0 font-13 text-secondary">merlyn.d@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+								<div class="customers-list-item d-flex align-items-center border-bottom p-2 cursor-pointer">
+									<div class="">
+										<img src="assets/images/avatars/avatar-7.png" class="rounded-circle" width="46" height="46" alt="" />
+									</div>
+									<div class="ms-2">
+										<h6 class="mb-1 font-14">Alister Campel</h6>
+										<p class="mb-0 font-13 text-secondary">alister_42@xyz.com</p>
+									</div>
+									<div class="list-inline d-flex customers-contacts ms-auto">	<a href="javascript:;" class="list-inline-item"><i class='bx bxs-envelope'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bxs-microphone'></i></a>
+										<a href="javascript:;" class="list-inline-item"><i class='bx bx-dots-vertical-rounded'></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-header">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-1">Top Products</h5>
+									</div>
+									<div class="dropdown options ms-auto">
+										<div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+										  <i class='bx bx-dots-horizontal-rounded'></i>
+										</div>
+										<ul class="dropdown-menu">
+										  <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+										</ul>
+									  </div>
+								</div>
+							</div>
+							<div class="product-list p-3 mb-3">
 
 
-                <!-- Start to do list -->
-                <div class="col-md-6 col-sm-6 ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>To Do List <small>Sample tasks</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
+								<div class="d-flex flex-column gap-3">
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/14.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Yellow Tshirt</h6>
+											<p class="mb-0">278 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$24K.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/19.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Titan Watch </h6>
+											<p class="mb-0">155 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$35K.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/04.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Red Sofa</h6>
+											<p class="mb-0">234 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$54K.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/18.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">iPhone Pro 7</h6>
+											<p class="mb-0">450 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$86K.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/10.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Light Chair</h6>
+											<p class="mb-0">345 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$49K.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/08.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Rounded Chair</h6>
+											<p class="mb-0">146 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$38K0.00</h6>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between gap-3 p-2 border radius-10">
+										<div class="">
+											<img src="assets/images/products/03.png" width="50" alt="" />
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Fancy Sofa</h6>
+											<p class="mb-0">560 Sales</p>
+										</div>
+										<div class="">
+											<h6 class="mb-0">$69K.00</h6>
+										</div>
+									</div>
+								</div>
 
-                      <div class="">
-                        <ul class="to_do">
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Schedule meeting with new client </p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End to do list -->
-                
-                <!-- start of weather widget -->
-                <div class="col-md-6 col-sm-6 ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Daily active users <small>Sessions</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="temperature"><b>Monday</b>, 07:30 AM
-                            <span>F</span>
-                            <span><b>C</b></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <div class="weather-icon">
-                            <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                          </div>
-                        </div>
-                        <div class="col-sm-8">
-                          <div class="weather-text">
-                            <h2>Bandar Lampung <br><i>Partly Cloudy Day</i></h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="weather-text pull-right">
-                          <h3 class="degrees">23</h3>
-                        </div>
-                      </div>
+								
 
-                      <div class="clearfix"></div>
-
-                      <div class="row weather-days">
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Mon</h2>
-                            <h3 class="degrees">25</h3>
-                            <canvas id="clear-day" width="32" height="32"></canvas>
-                            <h5>15 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Tue</h2>
-                            <h3 class="degrees">25</h3>
-                            <canvas height="32" width="32" id="rain"></canvas>
-                            <h5>12 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Wed</h2>
-                            <h3 class="degrees">27</h3>
-                            <canvas height="32" width="32" id="snow"></canvas>
-                            <h5>14 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Thu</h2>
-                            <h3 class="degrees">28</h3>
-                            <canvas height="32" width="32" id="sleet"></canvas>
-                            <h5>15 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Fri</h2>
-                            <h3 class="degrees">28</h3>
-                            <canvas height="32" width="32" id="wind"></canvas>
-                            <h5>11 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Sat</h2>
-                            <h3 class="degrees">26</h3>
-                            <canvas height="32" width="32" id="cloudy"></canvas>
-                            <h5>10 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- end of weather widget -->
-                <!-- <div class="col-lg-12">
-                  <a class="weatherwidget-io" href="https://forecast7.com/en/n5d45105d27/bandar-lampung-city/" data-label_1="BANDAR LAMPUNG" data-label_2="Cuaca" data-theme="original" >BANDAR LAMPUNG Cuaca</a>
-                </div>
-                <script>
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                </script> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        
-          <div class="pull-right">
-           2023 @ <a href="https://colorlib.com">Pratama Nusantara Sakti</a>
-          </div>
-          <div class="clearfix"></div>
-        
-        <!-- /footer content -->
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="./vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="./vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="./vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="./vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="./vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="./vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="./vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="./vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="./vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="./vendors/Flot/jquery.flot.js"></script>
-    <script src="./vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="./vendors/Flot/jquery.flot.time.js"></script>
-    <script src="./vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="./vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="./vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="./vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="./vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="./vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="./vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="./vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="./vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="./vendors/moment/min/moment.min.js"></script>
-    <script src="./vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="./build/js/custom.min.js"></script>
-
- 
+							</div>
+						</div>
+					</div>
+					<div class="col d-flex">
+						<div class="card radius-10 w-100 overflow-hidden">
+							<div class="card-header">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-0">Social Leads</h5>
+									</div>
+									<div class="dropdown options ms-auto">
+										<div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+										  <i class='bx bx-dots-horizontal-rounded'></i>
+										</div>
+										<ul class="dropdown-menu">
+										  <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+										  <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+										</ul>
+									  </div>
+								 </div>
+							</div>
+							<div class="card-body">
+								 <div class="social-leads">
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-facebook"><i class='bx bxl-facebook-circle' ></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Facebook</h6>
+											<p class="mb-0">175</p>
+										</div>
+										<div class="">45%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									<hr>
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-google"><i class='bx bxl-google' ></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Google</h6>
+											<p class="mb-0">960</p>
+										</div>
+										<div class="">24%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									<hr>
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-twitter"><i class='bx bxl-twitter'></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Twitter</h6>
+											<p class="mb-0">245</p>
+										</div>
+										<div class="">53%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									<hr>
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-linkedin"><i class='bx bxl-linkedin' ></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Linkedin</h6>
+											<p class="mb-0">784</p>
+										</div>
+										<div class="">10%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									<hr>
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-dribbble"><i class='bx bxl-dribbble' ></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Dribbble</h6>
+											<p class="mb-0">568</p>
+										</div>
+										<div class="">15%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									<hr>
+									<div class="d-flex align-items-center gap-3">
+										<div class="widgets-icons-small text-white bg-behance"><i class='bx bxl-behance' ></i></div>
+										<div class="flex-grow-1">
+											<h6 class="mb-0">Behance</h6>
+											<p class="mb-0">790</p>
+										</div>
+										<div class="">22%<i class='bx bx-up-arrow-alt ms-1'></i></div>
+									</div>
+									
+								 </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+			
+				<div class="card radius-10">
+					<div class="card-body">
+						<div class="d-flex align-items-center">
+							<div>
+								<h5 class="mb-0">Orders Summary</h5>
+							</div>
+							<div class="font-22 ms-auto"><i class='bx bx-dots-horizontal-rounded'></i>
+							</div>
+						</div>
+						<hr/>
+						<div class="table-responsive">
+							<table class="table align-middle mb-0">
+								<thead class="table-light">
+									<tr>
+										<th>Order id</th>
+										<th>Product</th>
+										<th>Customer</th>
+										<th>Date</th>
+										<th>Price</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>#897656</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/products/12.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Light Blue Chair</h6>
+												</div>
+											</div>
+										</td>
+										<td>Brooklyn Zeo</td>
+										<td>12 Jul 2020</td>
+										<td>$64.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-info radius-30">Pending</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#987549</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/shoes.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Green Sport Shoes</h6>
+												</div>
+											</div>
+										</td>
+										<td>Martin Hughes</td>
+										<td>14 Jul 2020</td>
+										<td>$45.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-primary radius-30">Dispatched</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#685749</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/headphones.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Red Headphone 07</h6>
+												</div>
+											</div>
+										</td>
+										<td>Shoan Stephen</td>
+										<td>15 Jul 2020</td>
+										<td>$67.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-success radius-30">Completed</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#887459</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/idea.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Mini Laptop Device</h6>
+												</div>
+											</div>
+										</td>
+										<td>Alister Campel</td>
+										<td>18 Jul 2020</td>
+										<td>$87.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-success radius-30">Completed</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#335428</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/user-interface.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Purple Mobile Phone</h6>
+												</div>
+											</div>
+										</td>
+										<td>Keate Medona</td>
+										<td>20 Jul 2020</td>
+										<td>$75.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-danger radius-30">Pending</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#224578</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/watch.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">Smart Hand Watch</h6>
+												</div>
+											</div>
+										</td>
+										<td>Winslet Maya</td>
+										<td>22 Jul 2020</td>
+										<td>$80.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-primary radius-30">Dispatched</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>#447896</td>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="recent-product-img">
+													<img src="assets/images/icons/tshirt.png" alt="">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-1 font-14">T-Shirt Blue</h6>
+												</div>
+											</div>
+										</td>
+										<td>Emy Jackson</td>
+										<td>28 Jul 2020</td>
+										<td>$96.00</td>
+										<td>
+											<div class="d-grid">
+												<a href="javascript:;" class="btn btn-sm btn-outline-danger radius-30">Pending</a>
+											</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions gap-3">
+												<a href="javascript:;"><i class='bx bx-trash'></i></a>
+												<a href="javascript:;"><i class='bx bx-cloud-download'></i></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr/>
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+					<label class="form-check-label" for="lightmode">Light</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+					<label class="form-check-label" for="darkmode">Dark</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
+					<label class="form-check-label" for="semidark">Semi Dark</label>
+				</div>
+			</div>
+			<hr/>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
+				<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Header Colors</h6>
+			<hr/>
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator headercolor1" id="headercolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor2" id="headercolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor3" id="headercolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor4" id="headercolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor5" id="headercolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor6" id="headercolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor7" id="headercolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor8" id="headercolor8"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!--end switcher-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
 	
-  </body>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="assets/plugins/chartjs/chart.min.js"></script>
+	<script src="assets/plugins/peity/jquery.peity.min.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+	<script src="assets/js/dashboard-eCommerce.js"></script>
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+	<script>
+		new PerfectScrollbar('.product-list');
+		new PerfectScrollbar('.customers-list');
+	</script>
+
+  <script>
+      
+  </script>
+</body>
+
+
+<!-- Mirrored from codervent.com/rukada/demo/horizontal/dashboard-eCommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Feb 2023 09:45:25 GMT -->
 </html>
