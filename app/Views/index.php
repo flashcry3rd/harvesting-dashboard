@@ -990,9 +990,8 @@
 		new PerfectScrollbar('.product-list');
 		new PerfectScrollbar('.customers-list');
 	</script>
-
-  <script>
-      
+  <script type="text/javascript">
+    
   </script>
 </body>
 
