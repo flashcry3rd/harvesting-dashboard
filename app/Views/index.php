@@ -41,7 +41,7 @@
 				<nav class="navbar navbar-expand">
 					<div class="topbar-logo-header">
 						<div class="">
-							<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+							<img src="assets/images/logo_pns_web.png" class="logo-icon" alt="logo icon">
 						</div>
 						<div class="">
 							<h4 class="logo-text">PNS Harvesting Dashboard</h4>
@@ -57,10 +57,10 @@
 					
 					<div class="user-box dropdown">
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+							<img src="assets/images/logo.png" style="background-color: grey;" class="user-img" alt="user avatar">
 							<div class="user-info ps-3">
-								<p class="user-name mb-0">Pauline Seitz</p>
-								<p class="designattion mb-0">Web Designer</p>
+								<p class="user-name mb-0">Pratama Nusantara Sakti</p>
+								<p class="designattion mb-0">Cane Delivery Dashboard</p>
 							</div>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
@@ -112,8 +112,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div>
-										<p class="mb-0 text-white">Revenue</p>
-										<h4 class="my-1 text-white">$75K</h4>
+										<p class="mb-0 text-white">Timbang Hari Ini</p>
+										<h4 class="my-1 text-white"><a id="timbang_today"></a></h4>
 										<p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p>
 									</div>
 									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-wallet"></i>
