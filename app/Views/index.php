@@ -113,8 +113,8 @@
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-white">Timbang Hari Ini</p>
-										<h4 class="my-1 text-white"><a id="timbang_today"></a></h4>
-										<p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p>
+										<h4 class="my-1 text-white"><a id="timbang_today">0,00</a> Kg</h4>
+										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p> -->
 									</div>
 									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-wallet"></i>
 									</div>
@@ -127,9 +127,9 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div>
-										<p class="mb-0 text-white">Total Customers</p>
-										<h4 class="my-1 text-white">8.4K</h4>
-										<p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>1.6K from last week</p>
+										<p class="mb-0 text-white">Total Timbang Todate</p>
+										<h4 class="my-1 text-white"><a id="timbang_todate">0,00</a> Kg</h4>
+										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>1.6K from last week</p> -->
 									</div>
 									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-group"></i>
 									</div>
@@ -142,9 +142,9 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div>
-										<p class="mb-0 text-white">Store Visitors</p>
-										<h4 class="my-1 text-white">59K</h4>
-										<p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>2.4K from last week</p>
+										<p class="mb-0 text-white">Total Timbang PerJam ( <a id="jam">00:00</a> ) </p>
+										<h4 class="my-1 text-white"><a id="timbang_perjam">0,00</a> Kg</h4>
+										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>2.4K from last week</p> -->
 									</div>
 									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-binoculars"></i>
 									</div>
@@ -991,10 +991,26 @@
 		new PerfectScrollbar('.customers-list');
 	</script>
   <script type="text/javascript">
-      
+	$(document).ready(function(){
+		var autoRun = setInterval(async () =>{
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				cache: false, 
+				url: "home/getData",
+				success: function(data){
+					$("#timbang_today").html(data['timbang2']);
+					$("#timbang_todate").html(data['timbangAll']);
+					$("#jam").html(data['jamNow']);
+					$("#timbang_perjam").html(data['timbangHour']);
+				}
+			})
+		}, 2000)
+	})
+		
   </script>
 </body>
 
 
 <!-- Mirrored from codervent.com/rukada/demo/horizontal/dashboard-eCommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Feb 2023 09:45:25 GMT -->
-</html>45
+</html>

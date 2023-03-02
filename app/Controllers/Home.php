@@ -157,15 +157,16 @@ class Home extends BaseController
             $totalMinggu5 += ($tm5['weight_in'] - $tm5['weight_out']);
         }
         
-        $data['timbang1'] = $totalTimbang1 ;
-        $data['timbang2'] = $totalTimbang2 ;
-        $data['timbangAll'] = $totalAll ;
-        $data['timbangHour'] = $totalHour ;
+        $data['timbang1'] = number_format($totalTimbang1, 2, ",", ".") ;
+        $data['timbang2'] = number_format($totalTimbang2, 2, ",", ".") ;
+        $data['timbangAll'] = number_format($totalAll, 2,",",".") ;
+        $data['timbangHour'] = number_Format($totalHour, 2,",",".") ;
         $data['timbangMinggu1'] = $totalMinggu1 ;
         $data['timbangMinggu2'] = $totalMinggu2 ;
         $data['timbangMinggu3'] = $totalMinggu3 ;
         $data['timbangMinggu4'] = $totalMinggu4 ;
         $data['timbangMinggu5'] = $totalMinggu5 ;
+        $data['jamNow'] = date("H:00")." - ".date("H:59");
 
         echo json_encode($data);
     }

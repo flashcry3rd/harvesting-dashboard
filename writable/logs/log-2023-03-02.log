@@ -9,3 +9,10 @@ CRITICAL - 2023-03-02 01:18:49 --> Undefined variable: timbang2
 #7 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2023-03-02 03:14:07 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('home/getData')
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('home/getData')
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
