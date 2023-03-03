@@ -166,7 +166,7 @@ class Home extends BaseController
         $data['timbangMinggu3'] = $totalMinggu3 ;
         $data['timbangMinggu4'] = $totalMinggu4 ;
         $data['timbangMinggu5'] = $totalMinggu5 ;
-        $data['jamNow'] = date("H:00")." - ".date("H:59");
+        $data['jamNow'] = date("H").":00 - ".date("H").":59";
 
         echo json_encode($data);
     }

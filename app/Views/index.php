@@ -116,7 +116,7 @@
 										<h4 class="my-1 text-white"><a id="timbang_today">0,00</a> Kg</h4>
 										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-wallet"></i>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-truck"></i>
 									</div>
 								</div>
 							</div>
@@ -131,7 +131,7 @@
 										<h4 class="my-1 text-white"><a id="timbang_todate">0,00</a> Kg</h4>
 										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-up-arrow align-middle"></i>1.6K from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-group"></i>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-collection"></i>
 									</div>
 								</div>
 							</div>
@@ -146,7 +146,7 @@
 										<h4 class="my-1 text-white"><a id="timbang_perjam">0,00</a> Kg</h4>
 										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>2.4K from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-binoculars"></i>
+									<div class="widgets-icons bg-light-transparent text-white ms-auto"><i class="bx bxs-alarm"></i>
 									</div>
 								</div>
 							</div>
@@ -157,9 +157,9 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center justify-content-between">
 									<div>
-										<p class="mb-0 text-white">Bounce Rate</p>
-										<h4 class="my-1 text-white">34.46%</h4>
-										<p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>12.2% from last week</p>
+										<p class="mb-0 text-white">Total Timbang Kemaren</p>
+										<h4 class="my-1 text-white"><a id="timbang_kemaren" >0,00</a></h4>
+										<!-- <p class="mb-0 font-13 text-white"><i class="bx bxs-down-arrow align-middle"></i>12.2% from last week</p> -->
 									</div>
 									<div class="widgets-icons bg-light-transparent text-white"><i class="bx bx-line-chart-down"></i>
 									</div>
@@ -176,7 +176,7 @@
 					  <div class="card radius-10 w-100">
 						<div class="card-body">
 						  <div class="d-flex align-items-center mb-3">
-							<h5 class="mb-0">Performance</h5>
+							<h5 class="mb-0">Overview Jenis Tebu</h5>
 							<div class="dropdown options ms-auto">
 							  <div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
 								<i class='bx bx-dots-horizontal-rounded'></i>
@@ -207,7 +207,7 @@
 						  </div>
 		  
 						  <div class="chart-js-container1">
-							<canvas id="chart1"></canvas>
+							<canvas id="chartJenisTebu"></canvas>
 						  </div>
 		  
 						</div>
@@ -978,7 +978,7 @@
 	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
 	
 	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<!-- <script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script> -->
 	<script src="assets/plugins/chartjs/chart.min.js"></script>
 	<script src="assets/plugins/peity/jquery.peity.min.js"></script>
 	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
@@ -1003,8 +1003,75 @@
 					$("#timbang_todate").html(data['timbangAll']);
 					$("#jam").html(data['jamNow']);
 					$("#timbang_perjam").html(data['timbangHour']);
+					$("#timbang_kemaren").html(data['timbang1']);
 				}
+			}); 
+			$(function(){
+				var ctx = document.getElementById('chartJenisTebu').getContext('2d');
+
+				var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
+					gradientStroke1.addColorStop(0, '#009efd');
+					gradientStroke1.addColorStop(1, '#2af598');
+
+				var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
+					gradientStroke2.addColorStop(0, '#7928ca');  
+					gradientStroke2.addColorStop(1, '#ff0080'); 
+
+				var myChart = new Chart(ctx, {
+					type: 'bar',
+					data: {
+						labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+						datasets: [{
+							label: 'Tebu Hijau',
+							data: [15, 22, 13, 15, 20, 10, 15],
+							backgroundColor: [
+								gradientStroke1
+							],
+							borderColor: [
+								gradientStroke1
+							],
+							borderWidth: 0,
+							borderRadius: 20
+						},
+						{
+							label: 'Tebu Bakar',
+							data: [20, 35, 30, 35, 28, 22, 25],
+							backgroundColor: [
+								gradientStroke2
+							],
+							borderColor: [
+								gradientStroke2
+							],
+							borderWidth: 0,
+							borderRadius: 20
+						}]
+					},
+					options: {
+						maintainAspectRatio: false,
+						barPercentage: 0.7,
+						categoryPercentage: 0.45,
+						plugins: {
+							legend: {
+								maxWidth: 20,
+								boxHeight: 20,
+								position:'bottom',
+								display: true,
+							}
+						},
+						scales: {
+							x: {
+								stacked: false,
+								beginAtZero: true
+							},
+							y: {
+								stacked: false,
+								beginAtZero: true
+							}
+							}
+					}
+				});
 			})
+			
 		}, 2000)
 	})
 		

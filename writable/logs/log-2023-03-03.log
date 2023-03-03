@@ -1,0 +1,289 @@
+ERROR - 2023-03-03 10:43:43 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:43:43 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:44:16 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:44:16 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:48:00 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:48:00 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:48:05 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:48:05 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:55:12 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:55:12 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:55:16 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:55:16 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:55:22 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:55:22 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:55:30 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:55:30 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:55:32 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:55:32 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:02 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:02 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:06 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:07 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:14 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:14 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:17 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:17 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:20 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:20 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:36 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:36 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 10:56:49 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 10:56:49 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 14:45:36 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 14:45:36 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 14:46:36 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 14:46:36 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 14:47:36 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 14:47:36 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-03-03 14:48:36 --> Error connecting to the database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+CRITICAL - 2023-03-03 14:48:36 --> Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\harvesting-dashboard\app\Models\Home_model.php(9): CodeIgniter\Database\BaseBuilder->getWhere('weight_out_time...')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Controllers\Home.php(112): App\Models\Home_model->getSelect('tbl_weight_scal...', 'weight_out_time...')
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->getData()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-03 15:38:44 --> Undefined variable: totalTime
+#0 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Debug\Toolbar.php(501): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Debug\Toolbar.php(464): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\xampp\htdocs\harvesting-dashboard\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\xampp\htdocs\harvesting-dashboard\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\xampp\htdocs\harvesting-dashboard\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
