@@ -1017,6 +1017,15 @@
 					gradientStroke2.addColorStop(0, '#7928ca');  
 					gradientStroke2.addColorStop(1, '#ff0080'); 
 
+					$.ajax({
+						type: "post",
+						dataType: "json",
+						url: "home/getDataChart1",
+						success: function(data){
+							console.log(data);
+						}
+					})
+
 				var myChart = new Chart(ctx, {
 					type: 'bar',
 					data: {

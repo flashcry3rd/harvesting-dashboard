@@ -3,9 +3,12 @@ use CodeIgniter\Model;
  
 class Home_model extends Model
 {
-    public function getSelect($table, $where)
+    public function getSelect($table, $where, $select="")
     {
         $tb = $this->db->table($table);
+        if($select != ""){
+            $tb->select($select);
+        }
         $get = $tb->getWhere($where);
         $result = $get->getResult('array');
 

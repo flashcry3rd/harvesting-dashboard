@@ -170,4 +170,23 @@ class Home extends BaseController
 
         echo json_encode($data);
     }
+
+    public function getDataChart1()
+    {
+        $model = new Home_model();
+        $year = date("Y");
+        $tbl = "tbl_weight_scale";
+        $where = array(
+            "jenis_tebu" => "Tebu Hijau",
+            "year(weight_out_time)" => $year
+        );
+        $tebu_hijau = $model->getSelect($tbl, $where);
+        $select = "min(weight_in_time) as min";
+        $getMinMonth = $model->selectAll($tbl, $select);
+        $minMonth = date("m" , strtotime($getMinMonth[0]['min']));
+        echo json_encode($tebu_hijau);  
+
+        
+
+    }
 }
