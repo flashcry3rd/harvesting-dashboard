@@ -181,15 +181,15 @@
 							  <div class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
 								<i class='bx bx-dots-horizontal-rounded'></i>
 							  </div>
-							  <ul class="dropdown-menu">
+							  <!-- <ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="javascript:;">Action</a></li>
 								<li><a class="dropdown-item" href="javascript:;">Another action</a></li>
 								<li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
-							  </ul>
+							  </ul> -->
 							</div>
 						  </div>
 
-						  <div class="hstack flex-wrap align-items-center justify-content-between gap-3 gap-sm-4 mb-3 border p-3 radius-10">
+						  <!-- <div class="hstack flex-wrap align-items-center justify-content-between gap-3 gap-sm-4 mb-3 border p-3 radius-10">
                             <div class="">
 								<h5 class="mb-0">974 <span class="text-success font-13">56% <i class='bx bx-up-arrow-alt'></i></span></h5>
 								<p class="mb-0">Page Views</p>
@@ -204,7 +204,7 @@
 								<h5 class="mb-0">42.8% <span class="text-success font-13">22% <i class='bx bx-up-arrow-alt'></i></span></h5>
 							    <p class="mb-0">Conversion Rate</p>
 							</div>
-						  </div>
+						  </div> -->
 		  
 						  <div class="chart-js-container1">
 							<canvas id="chartJenisTebu"></canvas>
@@ -992,7 +992,7 @@
 	</script>
   <script type="text/javascript">
 	$(document).ready(function(){
-		var autoRun = setInterval(async () =>{
+		function getData(){
 			$.ajax({
 				type: "post",
 				dataType: "json",
@@ -1022,66 +1022,93 @@
 						dataType: "json",
 						url: "home/getDataChart1",
 						success: function(data){
-							console.log(data);
+							const mar = data['totalTh'][3];
+							const apr = data['totalTh'][4];
+							const mei = data['totalTh'][5];
+							const juni = data['totalTh'][6];
+							const juli = data['totalTh'][7];
+							const aug = data['totalTh'][8];
+							const spt = data['totalTh'][9];
+							const oct = data['totalTh'][10];
+							const nov = data['totalTh'][11];
+							const dec = data['totalTh'][12];
+
+							const mar2 = data['totalTb'][3];
+							const apr2 = data['totalTb'][4];
+							const mei2 = data['totalTb'][5];
+							const juni2 = data['totalTb'][6];
+							const juli2 = data['totalTb'][7];
+							const aug2 = data['totalTb'][8];
+							const spt2 = data['totalTb'][9];
+							const oct2 = data['totalTb'][10];
+							const nov2 = data['totalTb'][11];
+							const dec2 = data['totalTb'][12];
+
+							var myChart = new Chart(ctx, {
+								type: 'bar',
+								data: {
+									labels: ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept'],
+									datasets: [{
+										label: 'Tebu Hijau',
+										data: [mar, apr, mei, juni, juli, aug, spt],
+										backgroundColor: [
+											gradientStroke1
+										],
+										borderColor: [
+											gradientStroke1
+										],
+										borderWidth: 0,
+										borderRadius: 20
+									},
+									{
+										label: 'Tebu Bakar',
+										data: [mar2, apr2, mei2, juni2, juli2, aug2, spt2],
+										backgroundColor: [
+											gradientStroke2
+										],
+										borderColor: [
+											gradientStroke2
+										],
+										borderWidth: 0,
+										borderRadius: 20
+									}]
+								},
+								options: {
+									maintainAspectRatio: false,
+									barPercentage: 0.7,
+									categoryPercentage: 0.45,
+									plugins: {
+										legend: {
+											maxWidth: 20,
+											boxHeight: 20,
+											position:'bottom',
+											display: true,
+										}
+									},
+									scales: {
+										x: {
+											stacked: false,
+											beginAtZero: true
+										},
+										y: {
+											stacked: false,
+											beginAtZero: true
+										}
+										}
+								}
+							});
 						}
 					})
 
-				var myChart = new Chart(ctx, {
-					type: 'bar',
-					data: {
-						labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-						datasets: [{
-							label: 'Tebu Hijau',
-							data: [15, 22, 13, 15, 20, 10, 15],
-							backgroundColor: [
-								gradientStroke1
-							],
-							borderColor: [
-								gradientStroke1
-							],
-							borderWidth: 0,
-							borderRadius: 20
-						},
-						{
-							label: 'Tebu Bakar',
-							data: [20, 35, 30, 35, 28, 22, 25],
-							backgroundColor: [
-								gradientStroke2
-							],
-							borderColor: [
-								gradientStroke2
-							],
-							borderWidth: 0,
-							borderRadius: 20
-						}]
-					},
-					options: {
-						maintainAspectRatio: false,
-						barPercentage: 0.7,
-						categoryPercentage: 0.45,
-						plugins: {
-							legend: {
-								maxWidth: 20,
-								boxHeight: 20,
-								position:'bottom',
-								display: true,
-							}
-						},
-						scales: {
-							x: {
-								stacked: false,
-								beginAtZero: true
-							},
-							y: {
-								stacked: false,
-								beginAtZero: true
-							}
-							}
-					}
-				});
+				
 			})
+			}
+		var autoRun = setInterval(async () =>{
+
+			getData();
 			
-		}, 2000)
+		}, 20000)
+		getData();
 	})
 		
   </script>

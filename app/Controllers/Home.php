@@ -106,6 +106,7 @@ class Home extends BaseController
 
         //PER KONTRAKTOR
         
+        
 
         ///////////////////////////
 
@@ -176,17 +177,43 @@ class Home extends BaseController
         $model = new Home_model();
         $year = date("Y");
         $tbl = "tbl_weight_scale";
-        $where = array(
-            "jenis_tebu" => "Tebu Hijau",
-            "year(weight_out_time)" => $year
-        );
-        $tebu_hijau = $model->getSelect($tbl, $where);
-        $select = "min(weight_in_time) as min";
-        $getMinMonth = $model->selectAll($tbl, $select);
-        $minMonth = date("m" , strtotime($getMinMonth[0]['min']));
-        echo json_encode($tebu_hijau);  
+        
+        $where['year(weight_out_time)'] = $year;
+        $like['jenis_tebu'] = "tebu hijau";
+        $tebu_hijau = $model->getSelect($tbl, $where, "", $like);
+        for($i=1;$i<=12;$i++){
+            $data['totalTh'][$i] = 0;
+        }
+       
+        foreach($tebu_hijau as $th)
+        {
+            for($i=1;$i<=12;$i++){
+                if(strtotime($th['weight_out_time']) >= strtotime("$year-$i-01") && strtotime($th['weight_out_time']) <= strtotime("$year-$i-31")) {
+                    $data['totalTh'][$i] += $th['weight_in'] - $th['weight_out'];    
+                }
+                
+            }
+        }
 
         
-
+        $where1['year(weight_out_time)'] = $year;
+        $like1['jenis_tebu'] = "tebu bakar";
+        $tebu_bakar = $model->getSelect($tbl, $where1,"",$like1);
+        for($i=1;$i<=12;$i++){
+            $data['totalTb'][$i] = 0;
+        }
+       
+        foreach($tebu_bakar as $tb)
+        {
+            for($i=1;$i<=12;$i++){
+                if(strtotime($tb['weight_out_time']) >= strtotime("$year-$i-01") && strtotime($tb['weight_out_time']) <= strtotime("$year-$i-31")) {
+                    $data['totalTb'][$i] += $tb['weight_in'] - $tb['weight_out'];    
+                }
+                
+            }
+        }
+        
+        echo json_encode($data);
+        
     }
 }

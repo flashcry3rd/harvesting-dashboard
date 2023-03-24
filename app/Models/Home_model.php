@@ -3,11 +3,14 @@ use CodeIgniter\Model;
  
 class Home_model extends Model
 {
-    public function getSelect($table, $where, $select="")
+    public function getSelect($table, $where, $select="", $like="")
     {
         $tb = $this->db->table($table);
         if($select != ""){
             $tb->select($select);
+        }
+        if($like != ""){
+            $tb->like($like);
         }
         $get = $tb->getWhere($where);
         $result = $get->getResult('array');
